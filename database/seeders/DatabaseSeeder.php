@@ -25,6 +25,8 @@ class DatabaseSeeder extends Seeder
             AreaSeeder::class,
             TagSeeder::class,
             CafeSeeder::class,
+            AdminUserSeeder::class,
+
         ]);
     }
 }

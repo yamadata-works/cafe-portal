@@ -9,6 +9,18 @@ class Cafe extends Model
 {
     use HasFactory;
 
+    // 登録・更新で、入れていい列の許可リスト
+    protected $fillable = [
+        'name',
+        'area_id',
+        'address',
+        'open_hours',
+        'budget',
+        'seats',
+        'description',
+        'image_path',
+    ];
+
     // このカフェは、1 つのエリアに属する
     public function area()
     {
