@@ -19,4 +19,9 @@ class CafeController extends Controller
 
         return view('cafes.index', compact('cafes'));
     }
+
+    public function show(Cafe $cafe)
+    {
+        return view('cafes.show', compact('cafe'));
+    }
 }

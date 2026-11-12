@@ -3,7 +3,7 @@
 
     <ul>
         @foreach ($cafes as $cafe)
-            <li>{{ $cafe->name }}</li>
+            <li><a href="{{ route('cafes.show', $cafe) }}">{{ $cafe->name }}</a></li>
         @endforeach
     </ul>
 

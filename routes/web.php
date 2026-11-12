@@ -9,3 +9,4 @@ Route::get('/', function () {
 
 Route::get('/hello', [CafeController::class, 'hello']);
 Route::get('/cafes', [CafeController::class, 'index'])->name('cafes.index');
+Route::get('/cafes/{cafe}', [CafeController::class, 'show'])->name('cafes.show');
