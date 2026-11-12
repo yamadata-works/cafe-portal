@@ -15,7 +15,13 @@ class CafeController extends Controller
 
     public function index()
     {
-        $cafes = Cafe::paginate(10);
+        $query = Cafe::query();
+
+        if (request('keyword')) {
+            $query->where('name', 'like', '%'.request('keyword').'%');
+        }
+
+        $cafes = $query->paginate(10)->withQueryString();
 
         return view('cafes.index', compact('cafes'));
     }
