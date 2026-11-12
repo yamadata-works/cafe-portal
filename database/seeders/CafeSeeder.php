@@ -13,7 +13,7 @@ class CafeSeeder extends Seeder
      */
     public function run(): void
     {
-        Cafe::factory()->count(30)->create();
+        Cafe::factory()->count(60)->create();
         foreach (Cafe::all() as $cafe) {
             $cafe->tags()->attach(Tag::inRandomOrder()->take(2)->pluck('id'));
         }
