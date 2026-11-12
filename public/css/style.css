@@ -1,0 +1,121 @@
+/* 色の決まり */
+:root {
+    --bg: #faf7f2;
+    --text: #3b2f2a;
+    --accent: #8b5e3c;
+    --border: #e4d8cc;
+    --muted: #8a7a70;
+    --card: #ffffff;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: "Hiragino Sans", "Noto Sans JP", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+a { color: var(--accent); }
+
+/* ヘッダー・本文・フッター */
+header { background: var(--accent); padding: 12px 20px; }
+header p { margin: 0; font-size: 1.2rem; font-weight: bold; }
+header a { color: #fff; text-decoration: none; }
+
+main { max-width: 860px; margin: 0 auto; padding: 24px 16px; }
+
+footer {
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--muted);
+    padding: 16px;
+    border-top: 1px solid var(--border);
+}
+
+h1 { font-size: 1.6rem; margin: 0 0 16px; }
+
+/* 入力欄とボタン */
+input, select, textarea, button {
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 8px 10px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: #fff;
+}
+
+button {
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover { opacity: 0.85; }
+
+/* 検索フォーム */
+.search-form { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+.result-count { color: var(--muted); margin: 0 0 12px; }
+
+/* カフェ一覧（カード） */
+.cafe-list { list-style: none; padding: 0; margin: 0 0 20px; display: grid; gap: 10px; }
+
+.cafe-list a {
+    display: block;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: var(--text);
+}
+
+.cafe-list a:hover { border-color: var(--accent); }
+.cafe-name { display: block; font-weight: bold; font-size: 1.1rem; }
+.cafe-meta { display: block; color: var(--muted); font-size: 0.9rem; }
+.cafe-list .empty { padding: 12px; color: var(--muted); }
+
+/* ページ送り */
+.pagination { display: flex; flex-wrap: wrap; gap: 6px; list-style: none; padding: 0; }
+
+.page-link {
+    display: block;
+    padding: 6px 12px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: #fff;
+    text-decoration: none;
+}
+
+.page-item.active .page-link { background: var(--accent); color: #fff; border-color: var(--accent); }
+.page-item.disabled .page-link { color: #c8bdb3; }
+
+/* カフェ詳細 */
+.cafe-detail {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.cafe-detail dl { display: grid; grid-template-columns: 6em 1fr; gap: 6px 12px; }
+.cafe-detail dt { font-weight: bold; color: var(--muted); }
+.cafe-detail dd { margin: 0; }
+
+.tag-list { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+
+.tag-list li {
+    background: #f3e9df;
+    color: var(--accent);
+    padding: 2px 12px;
+    border-radius: 999px;
+    font-size: 0.9rem;
+}
+
+/* 管理画面の表 */
+table { width: 100%; border-collapse: collapse; background: #fff; margin-bottom: 20px; }
+th, td { border: 1px solid var(--border); padding: 8px 10px; text-align: left; }
+th { background: #f3e9df; }
