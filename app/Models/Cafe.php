@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Cafe extends Model
 {
     use HasFactory;
+
     // このカフェは、1 つのエリアに属する
     public function area()
     {
