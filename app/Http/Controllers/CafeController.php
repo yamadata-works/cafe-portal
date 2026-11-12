@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Area;
 use App\Models\Cafe;
 
 class CafeController extends Controller
@@ -21,9 +22,14 @@ class CafeController extends Controller
             $query->where('name', 'like', '%'.request('keyword').'%');
         }
 
-        $cafes = $query->paginate(10)->withQueryString();
+        if (request('area_id')) {
+            $query->where('area_id', request('area_id'));
+        }
 
-        return view('cafes.index', compact('cafes'));
+        $cafes = $query->paginate(10)->withQueryString();
+        $areas = Area::all();
+
+        return view('cafes.index', compact('cafes', 'areas'));
     }
 
     public function show(Cafe $cafe)

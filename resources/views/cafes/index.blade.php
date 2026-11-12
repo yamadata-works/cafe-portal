@@ -3,6 +3,12 @@
 
         <form method="GET" action="{{ route('cafes.index') }}">
         <input type="text" name="keyword" value="{{ request('keyword') }}" placeholder="カフェ名で検索">
+                <select name="area_id">
+            <option value="">すべてのエリア</option>
+            @foreach ($areas as $area)
+                <option value="{{ $area->id }}" @selected(request('area_id') == $area->id)>{{ $area->name }}</option>
+            @endforeach
+        </select>
         <button type="submit">検索</button>
     </form>
 
