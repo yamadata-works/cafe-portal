@@ -9,6 +9,12 @@
                 <option value="{{ $area->id }}" @selected(request('area_id') == $area->id)>{{ $area->name }}</option>
             @endforeach
         </select>
+        <select name="tag_id">
+                        <option value="">すべてのタグ</option>
+            @foreach ($tags as $tag)
+                <option value="{{ $tag->id }}" @selected(request('tag_id') == $tag->id)>{{ $tag->name }}</option>
+            @endforeach
+        </select>
         <button type="submit">検索</button>
     </form>
 

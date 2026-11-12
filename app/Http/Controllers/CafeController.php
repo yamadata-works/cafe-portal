@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Area;
 use App\Models\Cafe;
+use App\Models\Tag;
 
 class CafeController extends Controller
 {
@@ -26,10 +27,17 @@ class CafeController extends Controller
             $query->where('area_id', request('area_id'));
         }
 
+        if (request('tag_id')) {
+            $query->whereHas('tags', function ($q) {
+                $q->where('tags.id', request('tag_id'));
+            });
+        }
+
         $cafes = $query->paginate(10)->withQueryString();
         $areas = Area::all();
+        $tags = Tag::all();
 
-        return view('cafes.index', compact('cafes', 'areas'));
+        return view('cafes.index', compact('cafes', 'areas', 'tags'));
     }
 
     public function show(Cafe $cafe)
