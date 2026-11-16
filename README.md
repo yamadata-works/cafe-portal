@@ -5,6 +5,16 @@ PHP / Laravel の学習と、ポートフォリオのために作りました。
 
 > 掲載しているお店のデータは、すべて架空のものです。
 
+## 画面
+
+| お店の一覧 | お店の詳細 |
+| --- | --- |
+| ![お店の一覧](docs/images/01_cafe_list.png) | ![お店の詳細](docs/images/02_cafe_detail.png) |
+
+| 管理者ログイン | 管理画面（カフェの登録） |
+| --- | --- |
+| ![管理者ログイン](docs/images/03_login.png) | ![カフェの登録](docs/images/04_admin_create.png) |
+
 ## できること
 
 ### 利用者向け
