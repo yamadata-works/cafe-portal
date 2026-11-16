@@ -11,9 +11,13 @@ PHP / Laravel の学習と、ポートフォリオのために作りました。
 | --- | --- |
 | ![お店の一覧](docs/images/01_cafe_list.png) | ![お店の詳細](docs/images/02_cafe_detail.png) |
 
-| 管理者ログイン | 管理画面（カフェの登録） |
+| 管理者ログイン | 管理画面（カフェの一覧） |
 | --- | --- |
-| ![管理者ログイン](docs/images/03_login.png) | ![カフェの登録](docs/images/04_admin_create.png) |
+| ![管理者ログイン](docs/images/03_login.png) | ![管理画面の一覧](docs/images/05_admin_list.png) |
+
+| 管理画面（カフェの登録） |
+| --- |
+| ![カフェの登録](docs/images/04_admin_create.png) |
 
 ## できること
 
