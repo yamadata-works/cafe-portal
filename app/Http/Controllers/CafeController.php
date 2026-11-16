@@ -17,7 +17,8 @@ class CafeController extends Controller
 
     public function index()
     {
-        $query = Cafe::query();
+        // エリアもまとめて読み込む（問い合わせの回数を減らす）
+        $query = Cafe::with('area');
 
         if (request('keyword')) {
             $query->where('name', 'like', '%'.request('keyword').'%');
