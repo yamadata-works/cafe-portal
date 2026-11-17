@@ -5,9 +5,7 @@ use App\Http\Controllers\CafeController;
 use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::redirect('/', '/cafes');
 
 Route::get('/cafes', [CafeController::class, 'index'])->name('cafes.index');
 Route::get('/cafes/{cafe}', [CafeController::class, 'show'])->name('cafes.show');

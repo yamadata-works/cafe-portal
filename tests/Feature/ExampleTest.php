@@ -1,7 +1,7 @@
 <?php
 
-test('the application returns a successful response', function () {
+test('トップページはカフェ一覧に移動する', function () {
     $response = $this->get('/');
 
-    $response->assertStatus(200);
+    $response->assertRedirect('/cafes');
 });
