@@ -8,13 +8,6 @@ use App\Models\Tag;
 
 class CafeController extends Controller
 {
-    public function hello()
-    {
-        $name = '木漏れ日';
-
-        return view('hello', ['name' => $name]);
-    }
-
     public function index()
     {
         // エリアもまとめて読み込む（問い合わせの回数を減らす）
